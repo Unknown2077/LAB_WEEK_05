@@ -8,6 +8,7 @@ interface CatApiService {
     @GET("images/search")
     fun searchImages(
         @Query("limit") limit: Int,
-        @Query("size") format: String
+        @Query("size") format: String,
+        @Query("include_breeds") includeBreeds: Boolean = true
     ) : Call<List<ImageData>>
 }
